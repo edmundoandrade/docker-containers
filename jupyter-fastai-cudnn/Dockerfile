@@ -14,6 +14,7 @@ RUN rm conda.sh
 ENV PATH=$CONDA_DIR/bin:$PATH
 
 RUN conda update -y conda
+RUN conda install -y python=3.7.3
 RUN conda install -y jupyter
 RUN conda install -y cuda100 -c pytorch
 RUN conda install -y -c pytorch -c fastai fastai pytorch
